@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!-- Fig. 5.10: bordeimagen.html -->
+<!-- Estirar y repetir una imagen para crear un borde. -->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Borde de imagen</title>
+        <style type="text/css">
+            div{
+                border-width: 30px;
+                width: 234px;
+                padding: 20px 20px;
+            }
+            #stretch
+            {
+                -webkit-border-image: url(Imagenes/logo.jpg) 80 80 80 80 stretch;
+                -moz-border-image: url(Imagenes/logo.jpg) 80 80 80 80 stretch;
+                -o-border-image: url(Imagenes/logo.jpg) 80 80 80 80 stretch;
+                border-image: url(Imagenes/logo.jpg) 80 80 80 80 stretch;
+            }
+            #repeat
+            {
+                -webkit-border-image: url(Imagenes/logo.jpg) 34% 34% repeat;
+                -moz-border-image: url(Imagenes/logo.jpg) 34% 34% repeat;
+                -o-border-image: url(Imagenes/logo.jpg) 34% 34% repeat;
+                border-image: url(Imagenes/logo.jpg) 34% 34% repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Bordes de imagen</h2>
+        <img src="Imagenes/logo.jpg" alt="imagen utilizada para demostrar bordes">
+        <p><div id="stretch">Se estira el borde de la imagen</div></p>
+        <p><div id="repeat">Se repite el borde de la imagen</div></p>
+
+          <br>
+        <hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo5.html">Volver a Capítulo 5</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table> 
+    </body>
+</html>
+
+
+
