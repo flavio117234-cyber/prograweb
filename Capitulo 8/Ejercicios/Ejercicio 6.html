@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- Ejercicio 8.6: Encontrar el menor de varios enteros -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Ejercicio 8.6 - Encontrar el menor</title>
+      <script>
+         var cantidad = parseInt( window.prompt( "Ingrese la cantidad de números a evaluar:", "0" ) );
+         var menor;
+         var numero;
+
+         if ( cantidad > 0 ) {
+            menor = parseInt( window.prompt( "Ingrese el número 1:", "0" ) );
+
+            for ( var i = 2; i <= cantidad; ++i ) {
+               numero = parseInt( window.prompt( "Ingrese el número " + i + ":", "0" ) );
+               if ( numero < menor ) {
+                  menor = numero;
+               }
+            }
+
+            document.writeln( "<p>El menor de los " + cantidad + " números introducidos es: " + menor + "</p>" );
+         } else {
+            document.writeln( "<p>No se introdujo una cantidad válida de números.</p>" );
+         }
+      </script>
+   </head>
+   <body>
+      <hr>
+
+      <table width="100%">
+        <tr>
+          <td>
+            <a href="../capitulo8.html">Volver a Capítulo 8</a>
+          </td>
+
+          <td align="right">
+            <a href="../../index.html">Volver a Capítulos</a>
+          </td>
+        </tr>
+      </table>
+   </body>
+</html>

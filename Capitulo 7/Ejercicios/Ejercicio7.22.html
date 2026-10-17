@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7.22</title>
+</head>
+<body>
+    <h1>Cifrado de Datos</h1>
+    <script>
+        let entrada = prompt("Ingrese un número de cuatro dígitos para cifrar:");
+        let numero = parseInt(entrada);
+
+        // Extraer cada uno de los 4 dígitos
+        let d1 = Math.floor(numero / 1000);
+        let d2 = Math.floor((numero % 1000) / 100);
+        let d3 = Math.floor((numero % 100) / 10);
+        let d4 = numero % 10;
+
+        // Cifrar cada dígito: (dígito + 7) % 10
+        d1 = (d1 + 7) % 10;
+        d2 = (d2 + 7) % 10;
+        d3 = (d3 + 7) % 10;
+        d4 = (d4 + 7) % 10;
+
+        // Intercambiar d1 con d3, y d2 con d4
+        let temp1 = d1;
+        d1 = d3;
+        d3 = temp1;
+
+        let temp2 = d2;
+        d2 = d4;
+        d4 = temp2;
+
+        document.write("<h2>Número original: " + entrada + "</h2>");
+        document.write("<h2>Número cifrado: " + d1 + d2 + d3 + d4 + "</h2>");
+    </script>
+
+    <hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

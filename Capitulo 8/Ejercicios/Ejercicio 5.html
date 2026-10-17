@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<!-- Ejercicio 8.5: ej08_05.html -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Misterio</title>
+      <script>
+
+         document.writeln( "<table>" );
+
+         for ( var i = 1; i <= 10; i++ )
+         {
+            document.writeln( "<tr>" );
+
+            for ( var j = 1; j <= 5; j++ )
+               document.writeln( "<td>(" + i + ", " + j + ")</td>" );
+
+            document.writeln( "</tr>" );
+         } // fin de for
+
+         document.writeln( "</table>" );
+
+      </script>
+   </head><body></body>
+</html>
+
+<!--
+   ¿Qué es lo que hace el programa?
+   Este programa genera una tabla HTML mediante ciclos anidados.
+   El ciclo externo (i) crea 10 filas (<tr>), y el ciclo interno (j) crea 5 columnas (<td>) por cada fila.
+   En cada celda de la tabla se muestran sus coordenadas en el formato "(fila, columna)",
+   desde (1, 1) hasta (10, 5).
+-->
+
+<hr>
+
+<table width="100%">
+  <tr>
+    <td>
+      <a href="../capitulo8.html">Volver a Capítulo 8</a>
+    </td>
+
+    <td align="right">
+      <a href="../../index.html">Volver a Capítulos</a>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6.23</title>
+</head>
+<body>
+    <script>
+        let n1 = parseFloat(prompt("Número 1:"));
+        let n2 = parseFloat(prompt("Número 2:"));
+        let n3 = parseFloat(prompt("Número 3:"));
+
+        let positivos = 0;
+        let negativos = 0;
+        let ceros = 0;
+
+        if (n1 > 0) positivos++; else if (n1 < 0) negativos++; else ceros++;
+        if (n2 > 0) positivos++; else if (n2 < 0) negativos++; else ceros++;
+        if (n3 > 0) positivos++; else if (n3 < 0) negativos++; else ceros++;
+
+        document.write("<p>Números positivos: " + positivos + "</p>");
+        document.write("<p>Números negativos: " + negativos + "</p>");
+        document.write("<p>Ceros introducidos: " + ceros + "</p>");
+    </script>
+</body>
+</html>

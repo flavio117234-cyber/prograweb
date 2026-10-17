@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 7.16</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Tabla de valores</h1>
+
+<table>
+    <tr>
+        <th>N</th>
+        <th>10*N</th>
+        <th>100*N</th>
+        <th>1000*N</th>
+    </tr>
+
+    <script>
+    for (var n = 1; n <= 6; n++) {
+        document.writeln("<tr>");
+        document.writeln("<td>" + n + "</td>");
+        document.writeln("<td>" + (10 * n) + "</td>");
+        document.writeln("<td>" + (100 * n) + "</td>");
+        document.writeln("<td>" + (1000 * n) + "</td>");
+        document.writeln("</tr>");
+    }
+    </script>
+
+</table>
+
+<hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

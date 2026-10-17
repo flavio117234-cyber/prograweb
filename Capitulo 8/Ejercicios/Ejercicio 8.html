@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<!-- Ejercicio 8.8: Interés compuesto con múltiples tasas -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Ejercicio 8.8 - Interés compuesto</title>
+      <script>
+         var monto;
+         var principal = 1000.00;
+
+         for ( var tasa = 5; tasa <= 10; ++tasa ) {
+            var tasaDecimal = tasa / 100;
+
+            document.writeln( "<h2>Tabla con tasa de interés del " + tasa + "%</h2>" );
+            document.writeln( "<table border='1'>" );
+            document.writeln( "<thead><tr><th>Año</th><th>Monto en depósito</th></tr></thead><tbody>" );
+
+            for ( var anio = 1; anio <= 10; ++anio ) {
+               monto = principal * Math.pow( 1.0 + tasaDecimal, anio );
+               document.writeln( "<tr><td>" + anio + "</td><td>" + monto.toFixed(2) + "</td></tr>" );
+            }
+
+            document.writeln( "</tbody></table>" );
+         }
+      </script>
+   </head>
+   <body>
+      <hr>
+
+      <table width="100%">
+        <tr>
+          <td>
+            <a href="../capitulo8.html">Volver a Capítulo 8</a>
+          </td>
+
+          <td align="right">
+            <a href="../../index.html">Volver a Capítulos</a>
+          </td>
+        </tr>
+      </table>
+   </body>
+</html>

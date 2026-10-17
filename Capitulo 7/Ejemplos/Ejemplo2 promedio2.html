@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<!-- Fig. 7.9: promedio2.html -->
+<!-- Repeticion controlada por centinela para calcular el promedio de una clase. -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Programa del promedio de una clase: repetición controlada por centinela</title>
+        <script>
+
+            var total; // suma de calificaciones
+            var contadorCalifaciones; // número de calificaciones introducidas
+            var calificacion; //calificacion escrita por el usuario (como cadena)
+            var valorCalificacion // valor de la calificación (convertido a entero)
+            var promedio; // promedio de todas las calificaciones
+
+            //Fase de inicializacion
+            total = 0; // borrar total
+            contadorCalifaciones = 0; // preparar iterar
+
+            //Fase de procesamiento
+            // pedir la entrada y leer la calificación del usuario
+            calificacion = window.prompt(
+                "Escriba la calificación entera, -1 para salir:", "0");
+            
+            //convertir calificacion de cadena a entero
+            valorCalificacion = parseInt( calificacion );
+
+            while( valorCalificacion != -1)
+            {
+                //sumar valorCalificacion al total
+                total = total + valorCalificacion;
+
+                //sumar 1 a contadorCalificaciones
+                contadorCalifaciones = contadorCalifaciones + 1;
+
+                // pedir la entrada y leer calificación del usuario
+                calificacion = window.prompt(
+                    "Escriba la calificación entera, -1 para salir:", "0");
+                
+                //convertir calificación de cadena a entero
+                valorCalificacion = parseInt( calificacion );
+
+            }//fin de while
+
+            //Fase de terminación
+            if( contadorCalifaciones != 0)
+            {
+                promedio = total / contadorCalifaciones;
+
+                //muestra el promedio de las calificaciones de los examenes
+                document.writeln( 
+                    "<h1>El promedio de la clase es " + promedio + "</h1>");
+            } //fin de if
+
+            else 
+                document.writeln("<p>No se introdujeron calificaciones</p>");
+
+        </script>
+    </head><body>
+        <hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+    </body>
+</html>

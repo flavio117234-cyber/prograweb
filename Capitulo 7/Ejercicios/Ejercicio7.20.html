@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7.20</title>
+</head>
+<body>
+    <h1>Verificador de Palíndromos (5 dígitos)</h1>
+    <script>
+        let entrada = prompt("Ingrese un número entero de 5 dígitos:");
+
+        // Validar que sea un número exactamente de 5 dígitos
+        while (entrada === null || entrada.length !== 5 || isNaN(parseInt(entrada))) {
+            alert("Error: Debe introducir un número entero de exactamente 5 dígitos.");
+            entrada = prompt("Intente de nuevo. Ingrese un número de 5 dígitos:");
+        }
+
+        let numero = parseInt(entrada);
+
+        // Descomponer el número usando división entera (%) y módulo (/)
+        let d1 = Math.floor(numero / 10000);
+        let d2 = Math.floor((numero % 10000) / 1000);
+        let d3 = Math.floor((numero % 1000) / 100);
+        let d4 = Math.floor((numero % 100) / 10);
+        let d5 = numero % 10;
+
+        // Comprobar si el primero es igual al último y el segundo al penúltimo
+        if (d1 === d5 && d2 === d4) {
+            document.write("<h2>El número " + numero + " es un PALÍNDROMO.</h2>");
+        } else {
+            document.write("<h2>El número " + numero + " NO es un palíndromo.</h2>");
+        }
+    </script>
+    <hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

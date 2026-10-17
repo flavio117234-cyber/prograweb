@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 7.17</title>
+</head>
+<body>
+
+<h1>Los dos números mayores</h1>
+
+<script>
+var contador = 1;
+var numero;
+var mayor = -1;
+var segundoMayor = -1;
+
+while (contador <= 10) {
+    numero = parseInt(
+        window.prompt("Escriba el número " + contador + " (0 a 9):")
+    );
+
+    if (numero > mayor) {
+        segundoMayor = mayor;
+        mayor = numero;
+    } else if (numero > segundoMayor) {
+        segundoMayor = numero;
+    }
+
+    contador++;
+}
+
+document.writeln("<p>El número mayor es: " + mayor + "</p>");
+document.writeln("<p>El segundo número mayor es: " +
+    segundoMayor + "</p>");
+
+</script>
+
+<hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

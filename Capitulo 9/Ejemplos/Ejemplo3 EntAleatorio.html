@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<!-- Fig. 9.4: EntAleatorio.html -->
+<!-- Enteros aleatorios, desplazar y escalar. -->
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>Desplazar y escalar enteros aleatorios</title>
+      <style type = "text/css">
+         p, ol { margin: 0; }
+         li    { display: inline; margin-right: 10px; }
+      </style>
+      <script>
+
+         var valor;
+
+         document.writeln( "<p>N&uacute;meros aleatorios</p><ol>" );
+
+         for ( var i = 1; i <= 30; ++i )
+         {
+            valor = Math.floor( 1 + Math.random() * 6 );
+            document.writeln( "<li>" + valor + "</li>" );
+         } // fin del for
+
+         document.writeln( "</ol>" );
+
+      </script>
+   </head>
+   <body>
+      <hr>
+
+      <table width="100%">
+        <tr>
+          <td>
+            <a href="../capitulo9.html">Volver a Capítulo 9</a>
+          </td>
+
+          <td align="right">
+            <a href="../../index.html">Volver a Capítulos</a>
+          </td>
+        </tr>
+      </table>
+   </body>
+</html>

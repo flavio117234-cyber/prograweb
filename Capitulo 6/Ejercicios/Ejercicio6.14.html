@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6.14</title>
+</head>
+<body>
+    <h1>Ejercicio 6.14</h1>
+
+    <h2>a) x = 7 + 3 * 6 / 2 - 1</h2>
+    <p><strong>Orden de evaluación de operadores:</strong></p>
+    <ol>
+        <li>Multiplicación (*)</li>
+        <li>División (/)</li>
+        <li>Suma (+)</li>
+        <li>Resta (-)</li>
+        <li>Asignación (=)</li>
+    </ol>
+    <script>
+        var xa = 7 + 3 * 6 / 2 - 1;
+        document.write("<p><strong>Resultado final:</strong> x = " + xa + "</p>");
+    </script>
+
+    <hr>
+
+    <h2>b) x = 2 % 2 + 2 * 2 - 2 / 2</h2>
+    <p><strong>Orden de evaluación de operadores:</strong></p>
+    <ol>
+        <li>Residuo/Módulo (%)</li>
+        <li>Multiplicación (*)</li>
+        <li>División (/)</li>
+        <li>Suma (+)</li>
+        <li>Resta (-)</li>
+        <li>Asignación (=)</li>
+    </ol>
+    <script>
+        var xb = 2 % 2 + 2 * 2 - 2 / 2;
+        document.write("<p><strong>Resultado final:</strong> x = " + xb + "</p>");
+    </script>
+
+    <hr>
+
+    <h2>c) x = ( 3 * 9 * ( 3 + ( 9 * 3 / ( 3 ) ) ) )</h2>
+    <p><strong>Orden de evaluación de operadores:</strong></p>
+    <ol>
+        <li>Paréntesis más interno ( 3 )</li>
+        <li>Multiplicación (*) dentro del paréntesis interno</li>
+        <li>División (/) dentro del paréntesis interno</li>
+        <li>Suma (+) dentro del paréntesis intermedio</li>
+        <li>Primera multiplicación (*) dentro del paréntesis externo</li>
+        <li>Segunda multiplicación (*) dentro del paréntesis externo</li>
+        <li>Asignación (=)</li>
+    </ol>
+    <script>
+        var xc = ( 3 * 9 * ( 3 + ( 9 * 3 / ( 3 ) ) ) );
+        document.write("<p><strong>Resultado final:</strong> x = " + xc + "</p>");
+    </script>
+
+    <hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo6.html">Volver a Capítulo 6</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+
+</body>
+</html>

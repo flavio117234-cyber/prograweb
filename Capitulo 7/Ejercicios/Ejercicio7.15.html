@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 7.15</title>
+</head>
+<body>
+
+<h1>Número mayor</h1>
+
+<script>
+var contador = 1;
+var numero;
+var mayor = -1;
+
+while (contador <= 10) {
+    numero = parseInt(
+        window.prompt("Escriba el número " + contador + " (0 a 9):")
+    );
+
+    if (numero > mayor) {
+        mayor = numero;
+    }
+
+    contador++;
+}
+
+document.writeln("<p>El número mayor es: " + mayor + "</p>");
+
+</script>
+
+<hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

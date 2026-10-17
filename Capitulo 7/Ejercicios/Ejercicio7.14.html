@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 7.14</title>
+</head>
+<body>
+
+<h1>Sueldo de empleados</h1>
+
+<script>
+var horas;
+var tarifa;
+var sueldo;
+
+for (var i = 1; i <= 3; i++) {
+    horas = parseFloat(
+        window.prompt("Horas trabajadas por el empleado " + i + ":")
+    );
+
+    tarifa = parseFloat(
+        window.prompt("Tarifa por hora del empleado " + i + ":")
+    );
+
+    if (horas <= 40) {
+        sueldo = horas * tarifa;
+    } else {
+        sueldo = 40 * tarifa + (horas - 40) * tarifa * 1.5;
+    }
+
+    document.writeln("<p>Empleado " + i +
+        ": sueldo bruto = $" + sueldo.toFixed(2) + "</p>");
+}
+
+</script>
+
+<hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

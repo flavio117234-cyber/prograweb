@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!-- Fig. 7.7: promedio.html-->
+<!-- Repeticion controlada por contador para calcular el promedio de una clase. -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Programa del promedio de una clase</title>
+        <script>
+            
+            var total; //Suma de calificaciones
+            var contadorCalificaciones; // número de calificaciones introducidas
+            var calificacion; // calificacion escrita por el usuario (Como cadena)
+            var valorCalificacion; // valor de la calificación (convertido en entero)
+            var promedio; //promedio de todas las calificaciones
+
+            //Fase de inicialización 
+            total = 0; // borrar el total
+            contadorCalificaciones = 1; // preparar para iterar
+
+            //Fase de procesamiento
+
+            while (contadorCalificaciones <= 10) //Iterar 10 veces
+            {
+
+                //pedir la entrada y leer la calificacion del usuario
+                calificacion = window.prompt("Escriba la califiacion entera:", "0");
+                
+                //Convertir calificacion de cadena en entero
+                valorCalificacion = parseInt(calificacion);
+
+                //sumar valorCalificacion al total
+                total = total + valorCalificacion;
+
+                //agregar 1 al contadorCalificaciones
+                contadorCalificaciones = contadorCalificaciones + 1;
+            }// fin de while
+
+            //fase de terminacion
+            promedio = total / 10;
+
+            //mostrar el promedio de las calficaciones de los examenes
+            document.writeln(
+                "<h1>El promedio de la clase es " + promedio + "</h1>");
+
+        </script>
+    </head><body>
+        <hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+    </body>
+</html>

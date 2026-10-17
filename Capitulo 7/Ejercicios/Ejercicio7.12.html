@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 7.12</title>
+</head>
+<body>
+
+<h1>Control de límite de crédito</h1>
+
+<script>
+var numeroCuenta;
+var saldoInicial;
+var cargos;
+var creditos;
+var limiteCredito;
+var nuevoSaldo;
+
+numeroCuenta = window.prompt("Escriba el número de cuenta:");
+
+saldoInicial = parseFloat(
+    window.prompt("Escriba el saldo inicial:")
+);
+
+cargos = parseFloat(
+    window.prompt("Escriba el total de los cargos del mes:")
+);
+
+creditos = parseFloat(
+    window.prompt("Escriba el total de los créditos del mes:")
+);
+
+limiteCredito = parseFloat(
+    window.prompt("Escriba el límite de crédito:")
+);
+
+nuevoSaldo = saldoInicial + cargos - creditos;
+
+document.writeln("<p>Número de cuenta: " +
+    numeroCuenta + "</p>");
+
+document.writeln("<p>Nuevo saldo: $" +
+    nuevoSaldo.toFixed(2) + "</p>");
+
+document.writeln("<p>Límite de crédito: $" +
+    limiteCredito.toFixed(2) + "</p>");
+
+if (nuevoSaldo > limiteCredito) {
+    document.writeln(
+        "<p>Se excedió el límite de su crédito.</p>"
+    );
+}
+
+</script>
+
+<hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

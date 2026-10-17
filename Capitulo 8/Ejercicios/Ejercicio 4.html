@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<!-- Ejercicio 8.4: Encuentre el error -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Ejercicio 8.4 - Encuentre el error</title>
+   </head>
+   <body>
+      <h1>Ejercicio 8.4: Encuentre el error</h1>
+
+      <h2>a) Error en el ciclo for</h2>
+      <p><strong>Errores:</strong></p>
+      <ul>
+         <li>La palabra clave <code>For</code> está escrita con mayúscula inicial (debe ser en minúscula: <code>for</code>).</li>
+         <li>Se usaron comas (<code>,</code>) en lugar de puntos y comas (<code>;</code>) para separar las tres partes del ciclo.</li>
+         <li>Para contar hacia abajo de 100 a 1 se debe decrementar la variable (<code>--x</code>) en lugar de incrementarla (<code>++x</code>), de lo contrario se genera un ciclo infinito.</li>
+      </ul>
+      <p><strong>Código corregido:</strong></p>
+      <pre>
+for ( var x = 100; x &gt;= 1; --x )
+   document.writeln( x );</pre>
+
+      <h2>b) Error en la estructura switch</h2>
+      <p><strong>Error:</strong> Faltan las instrucciones <code>break;</code> al final de cada <code>case</code>. Sin el <code>break;</code> en el <code>case 0:</code>, si el valor es par, se imprimirá "Entero par" e inmediatamente después caerá a imprimir "Entero impar".</p>
+      <p><strong>Código corregido:</strong></p>
+      <pre>
+switch ( valor % 2 )
+{
+   case 0:
+      document.writeln( "Entero par" );
+      break;
+   case 1:
+      document.writeln( "Entero impar" );
+      break;
+}</pre>
+
+      <h2>c) Error al imprimir impares decrecientes</h2>
+      <p><strong>Error:</strong> Se utiliza <code>x += 2</code> que incrementa el valor de <code>x</code> en lugar de decrementarlo. Para ir de 19 a 1 debe restarse usando <code>x -= 2</code>.</p>
+      <p><strong>Código corregido:</strong></p>
+      <pre>
+for ( var x = 19; x &gt;= 1; x -= 2 )
+   document.writeln( x );</pre>
+
+      <h2>d) Error en el ciclo do...while</h2>
+      <p><strong>Errores:</strong></p>
+      <ul>
+         <li>La palabra clave <code>While</code> está escrita con mayúscula inicial (debe ser en minúscula: <code>while</code>).</li>
+         <li>La condición <code>contador &lt; 100</code> detiene el ciclo en 98, excluyendo el número 100. Para incluir el 100 debe ser <code>contador &lt;= 100</code>.</li>
+      </ul>
+      <p><strong>Código corregido:</strong></p>
+      <pre>
+var contador = 2;
+do {
+   document.writeln( contador );
+   contador += 2;
+} while ( contador &lt;= 100 );</pre>
+
+      <hr>
+
+      <table width="100%">
+        <tr>
+          <td>
+            <a href="../capitulo8.html">Volver a Capítulo 8</a>
+          </td>
+
+          <td align="right">
+            <a href="../../index.html">Volver a Capítulos</a>
+          </td>
+        </tr>
+      </table>
+   </body>
+</html>

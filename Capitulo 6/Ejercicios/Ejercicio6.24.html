@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6.24</title>
+</head>
+<body>
+    <h1>Tabla de Cuadrados y Cubos</h1>
+    <script>
+        document.write("<table border='1'>");
+        document.write("<tr><th>Número</th><th>Cuadrado</th><th>Cubo</th></tr>");
+
+        for (let i = 0; i <= 5; i++) {
+            document.write("<tr>");
+            document.write("<td>" + i + "</td>");
+            document.write("<td>" + (i * i) + "</td>");
+            document.write("<td>" + (i * i * i) + "</td>");
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+    </script>
+
+    <hr>
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo6.html">Volver a Capítulo 6</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

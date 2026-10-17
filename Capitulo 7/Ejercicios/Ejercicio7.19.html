@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7.19</title>
+</head>
+<body>
+    <h1>Ejercicio 7.19: El problema del else suelto</h1>
+
+    <h2>Caso a)</h2>
+    <p>En JavaScript, un <code>else</code> sin llaves siempre se asocia con el <code>if</code> más cercano.</p>
+    
+    <h3>Para x = 9, y = 11:</h3>
+    <p>Como x &lt; 10 e y &gt; 10 son verdaderos, se ejecuta el primer <code>writeln</code> y el último (fuera del else):</p>
+    <script>
+        var x = 9, y = 11;
+        if ( x < 10 )
+        if ( y > 10 )
+        document.writeln ( "<p>*****</p>" );
+        else
+        document.writeln ( "<p>#####</p>" );
+        document.writeln ( "<p>$$$$$</p>" );
+    </script>
+
+    <h3>Para x = 11, y = 9:</h3>
+    <p>Como x &lt; 10 es falso, se salta todo el bloque interno y solo ejecuta la última línea fuera de las condiciones:</p>
+    <script>
+        var x = 11, y = 9;
+        if ( x < 10 )
+        if ( y > 10 )
+        document.writeln ( "<p>*****</p>" );
+        else
+        document.writeln ( "<p>#####</p>" );
+        document.writeln ( "<p>$$$$$</p>" );
+    </script>
+
+    <hr>
+
+    <h2>Caso b)</h2>
+    <p>Aquí las llaves fuertemente asocian el <code>else</code> con el primer <code>if (x &lt; 10)</code>.</p>
+
+    <h3>Para x = 9, y = 11:</h3>
+    <script>
+        var x = 9, y = 11;
+        if ( x < 10 )
+        {
+        if ( y > 10 )
+        document.writeln ( "<p>*****</p>" );
+        }
+        else
+        {
+        document.writeln ( "<p>#####</p>" );
+        document.writeln ( "<p>$$$$$</p>" );
+        }
+    </script>
+
+    <h3>Para x = 11, y = 9:</h3>
+    <p>Como x &lt; 10 es falso, entra directo al <code>else</code>[cite: 3]:</p>
+    <script>
+        var x = 11, y = 9;
+        if ( x < 10 )
+        {
+        if ( y > 10 )
+        document.writeln ( "<p>*****</p>" );
+        }
+        else
+        {
+        document.writeln ( "<p>#####</p>" );
+        document.writeln ( "<p>$$$$$</p>" );
+        }
+    </script>
+
+    <hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

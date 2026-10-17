@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- Ejercicio 8.2: Instrucciones en JavaScript -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Ejercicio 8.2 - Instrucciones JavaScript</title>
+   </head>
+   <body>
+      <h1>Ejercicio 8.2: Instrucciones en JavaScript</h1>
+
+      <h2>a) Suma de impares entre 1 y 99 con ciclo for</h2>
+      <script>
+         var suma = 0;
+         var cuenta;
+         for ( cuenta = 1; cuenta <= 99; cuenta += 2 ) {
+            suma += cuenta;
+         }
+         document.writeln( "<p>La suma es: " + suma + "</p>" );
+      </script>
+
+      <h2>b) Calcular 2.5 elevado a la 3 usando Math.pow</h2>
+      <script>
+         var potencia = Math.pow( 2.5, 3 );
+         document.writeln( "<p>2.5^3 = " + potencia + "</p>" );
+      </script>
+
+      <h2>c) Imprimir enteros del 1 al 20 (5 por línea) usando ciclo while</h2>
+      <script>
+         var x = 1;
+         while ( x <= 20 ) {
+            document.write( x + " " );
+            if ( x % 5 === 0 ) {
+               document.writeln( "<br>" );
+            }
+            ++x;
+         }
+      </script>
+
+      <h2>d) Imprimir enteros del 1 al 20 (5 por línea) usando ciclo for</h2>
+      <script>
+         for ( x = 1; x <= 20; ++x ) {
+            document.write( x + " " );
+            if ( x % 5 === 0 ) {
+               document.writeln( "<br>" );
+            }
+         }
+      </script>
+
+      <hr>
+
+      <table width="100%">
+        <tr>
+          <td>
+            <a href="../capitulo8.html">Volver a Capítulo 8</a>
+          </td>
+
+          <td align="right">
+            <a href="../../index.html">Volver a Capítulos</a>
+          </td>
+        </tr>
+      </table>
+   </body>
+</html>
+</html>

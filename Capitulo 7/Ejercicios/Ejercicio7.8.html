@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 7.8</title>
+</head>
+<body>
+<h1>Ejercicio 7.8</h1>
+
+<p>Instrucción original:</p>
+<pre>
+while (z >= 0)
+    suma += z;
+</pre>
+
+<p>El problema es que z no cambia dentro del ciclo. Si z comienza siendo mayor o igual que cero, el ciclo puede repetirse indefinidamente.</p>
+
+<p>Una posible corrección es:</p>
+<pre>
+while (z >= 0) {
+    suma += z;
+    z--;
+}
+</pre>
+
+<hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

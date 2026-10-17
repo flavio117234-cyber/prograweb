@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6.20</title>
+</head>
+<body>
+    <script>
+        let n1 = parseInt(prompt("Entero 1:"));
+        let n2 = parseInt(prompt("Entero 2:"));
+        let n3 = parseInt(prompt("Entero 3:"));
+        let n4 = parseInt(prompt("Entero 4:"));
+        let n5 = parseInt(prompt("Entero 5:"));
+
+        let menor = n1;
+        let mayor = n1;
+
+        if (n2 < menor) menor = n2;
+        if (n3 < menor) menor = n3;
+        if (n4 < menor) menor = n4;
+        if (n5 < menor) menor = n5;
+
+        if (n2 > mayor) mayor = n2;
+        if (n3 > mayor) mayor = n3;
+        if (n4 > mayor) mayor = n4;
+        if (n5 > mayor) mayor = n5;
+
+        document.write("<p>El número menor es: " + menor + "</p>");
+        document.write("<p>El número mayor es: " + mayor + "</p>");
+    </script>
+
+    <hr>
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo6.html">Volver a Capítulo 6</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

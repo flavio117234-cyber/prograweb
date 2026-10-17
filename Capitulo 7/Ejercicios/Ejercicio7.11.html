@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ejercicio 7.11</title>
+</head>
+<body>
+
+<h1>Rendimiento de gasolina</h1>
+
+<script>
+var kilometros;
+var litros;
+var totalKilometros = 0;
+var totalLitros = 0;
+var rendimiento;
+
+do {
+    kilometros = parseFloat(
+        window.prompt("Escriba los kilómetros recorridos:")
+    );
+
+    litros = parseFloat(
+        window.prompt("Escriba los litros de gasolina utilizados:")
+    );
+
+    if (kilometros > 0 && litros > 0) {
+        rendimiento = kilometros / litros;
+
+        document.writeln("<p>Kilómetros por litro: " +
+            rendimiento.toFixed(2) + "</p>");
+
+        totalKilometros += kilometros;
+        totalLitros += litros;
+    } else {
+        window.alert("Los kilómetros y litros deben ser mayores que cero.");
+    }
+
+    var continuar = window.confirm("¿Desea registrar otro viaje?");
+
+} while (continuar);
+
+if (totalLitros > 0) {
+    rendimiento = totalKilometros / totalLitros;
+
+    document.writeln("<p>Total de kilómetros: " +
+        totalKilometros + "</p>");
+
+    document.writeln("<p>Total de litros: " +
+        totalLitros + "</p>");
+
+    document.writeln("<p>Rendimiento total: " +
+        rendimiento.toFixed(2) + " km/l</p>");
+}
+
+</script>
+
+<hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Explicación Ejercicio 7.18</title>
+</head>
+<body>
+    <h1>Explicación del Ejercicio 7.18</h1>
+
+    <h2>Análisis del Código</h2>
+    <ol>
+        <li>
+            <strong>Bucle Externo:</strong> La variable <code>fila</code> inicia en 10 y disminuye hasta 1 (hace 10 iteraciones en total).
+        </li>
+        <li>
+            <strong>Bucle Interno:</strong> En cada fila, la variable <code>columna</code> recorre desde 1 hasta 10 (imprime 10 caracteres por fila).
+        </li>
+        <li>
+            <strong>Condición Ternaria <code>fila % 2 == 1 ? "&lt;" : "&gt;"</code>:</strong>
+            <ul>
+                <li>Si la <code>fila</code> es <strong>impar</strong>, imprime el carácter <code>&lt;</code>.</li>
+                <li>Si la <code>fila</code> es <strong>par</strong>, imprime el carácter <code>&gt;</code>.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Resultado:</strong> Como empieza en la fila 10 (par) e irá bajando de una en una, alternará filas completas de <code>&gt;</code> y filas de <code>&lt;</code>.
+        </li>
+    </ol>
+
+    <hr>
+
+    <h2>Resultado Impreso por el Script:</h2>
+
+    <script>
+        var fila = 10;
+        var columna;
+
+        while ( fila >= 1 )
+        {
+            columna = 1;
+            document.writeln( "<p>" );
+
+            while ( columna <= 10 )
+            {
+                document.write( fila % 2 == 1 ? "<" : ">" );
+                ++columna;
+            } // end while
+
+            --fila;
+            document.writeln( "</p>" );
+        } // end while
+    </script>
+
+<hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7.23</title>
+</head>
+<body>
+    <h1>Descifrado de Datos</h1>
+    <script>
+        let entrada = prompt("Ingrese el número cifrado de cuatro dígitos:");
+        let numero = parseInt(entrada);
+
+        // Extraer dígitos del número cifrado
+        let d1 = Math.floor(numero / 1000);
+        let d2 = Math.floor((numero % 1000) / 100);
+        let d3 = Math.floor((numero % 100) / 10);
+        let d4 = numero % 10;
+
+        // Revertir el intercambio (intercambiar d1 con d3, y d2 con d4)
+        let temp1 = d1;
+        d1 = d3;
+        d3 = temp1;
+
+        let temp2 = d2;
+        d2 = d4;
+        d4 = temp2;
+
+        // Descifrar cada dígito: (dígito + 3) % 10 es la operación inversa de (dígito + 7) % 10
+        d1 = (d1 + 3) % 10;
+        d2 = (d2 + 3) % 10;
+        d3 = (d3 + 3) % 10;
+        d4 = (d4 + 3) % 10;
+
+        document.write("<h2>Número cifrado introducido: " + entrada + "</h2>");
+        document.write("<h2>Número original descifrado: " + d1 + d2 + d3 + d4 + "</h2>");
+    </script>
+
+    <hr>
+
+    <table width="100%">
+      <tr>
+        <td>
+          <a href="../capitulo7.html">Volver a Capítulo 7</a>
+        </td>
+
+        <td align="right">
+          <a href="../../index.html">Volver a Capítulos</a>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>
